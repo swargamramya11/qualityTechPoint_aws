@@ -121,7 +121,7 @@ public class LaunchBrowser {
 	        Properties configProp = new Properties();
 	        try {
 	            String env = System.getProperty("env");
-	            File file = new File("TestSettings.properties");
+	            File file = new File("configuration.properties");
 	            FileInputStream fileInput = null;
 	            fileInput = new FileInputStream(file);
 	           configProp.load(fileInput);
