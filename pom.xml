@@ -1,22 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.quaityPointTech2</groupId>
-  <artifactId>qualityPointTech2</artifactId>
+  <groupId>com.quaityPointTech_aws</groupId>
+  <artifactId>qualityPointTech_aws</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  
-  
-  <properties>
-       
-        <maven.compiler.source>1.8</maven.compiler.source>
-  <maven.compiler.target>1.8</maven.compiler.target>
-  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
- <executionPlatformDefault>LOCAL_CHROME</executionPlatformDefault>
-        <gridURLDefault>http://zalenium:4444/wd/hub</gridURLDefault>
-        <apiHostDefault>localhost</apiHostDefault>
+ <properties>
+        <!--LOCAL_CHROME, LOCAL_FIREFOX, AWS_CHROME, AWS_FIREFOX, AWS_DEVICEFARM_CHROME, AWS_DEVICEFARM_FIREFOX-->
+<!--        <executionPlatformDefault>AWS_CHROME</executionPlatformDefault>-->
+        <executionPlatformDefault>AWS_CHROME</executionPlatformDefault>
+        <apiHostDefault>awswrkshpalbmock-1310692469.us-west-2.elb.amazonaws.com</apiHostDefault>
         <applicationHostDefault>awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com</applicationHostDefault>
         <dashboardHostDefault>localhost</dashboardHostDefault>
-     
     </properties>
   
   <build>
@@ -84,7 +78,11 @@
             <version>4.2.6</version>
             <scope>compile</scope>
         </dependency>
- 
+  <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>aws-sdk-java</artifactId>
+            <version>2.10.60</version>
+        </dependency>
 <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
